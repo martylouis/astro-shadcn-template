@@ -1,5 +1,6 @@
 ---
-import { DropdownMenuDemo } from "@/components/DropdownMenu";
+import { DropdownMenuDemo } from "@/components/DropdownMenuDemo";
+import { DialogDemo } from "@/components/DialogDemo";
 import { Button } from "@/components/ui/button";
 import "@/styles/globals.css";
 ---
@@ -10,13 +11,18 @@ import "@/styles/globals.css";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Astro Shadcn UI Demo</title>
   </head>
   <body>
-    <div class="container mt-8 flex flex-col items-center gap-16">
-      <h1>Astro Shadcn UI</h1>
-      <Button>Button</Button>
-      <DropdownMenuDemo client:load />
+    <div class="container">
+      <h1 class="mt-8 text-center text-3xl font-black text-primary">
+        Astro + Shadcn UI Demo
+      </h1>
+      <div class="mt-16 flex flex-col items-center gap-16">
+        <Button>Button</Button>
+        <DropdownMenuDemo client:load />
+        <DialogDemo client:load />
+      </div>
     </div>
   </body>
 </html>
